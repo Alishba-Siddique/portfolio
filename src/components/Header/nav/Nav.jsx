@@ -3,9 +3,9 @@ import styles from './style.module.scss';
 import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { menuSlide } from '../animation';
-import Link from './Link';
-import Curve from './Curve';
-import Footer from './Footer';
+import Link from './LinkNav/LinkNav';
+import Curve from './Curve/Curve';
+import Footer from './Footer/Footer';
 // import work from '../../../pages/work/page.jsx';
 // import about from '../../../pages/about/page.jsx';
 // import contact from '../../../pages/contact/page.jsx';
@@ -29,7 +29,7 @@ const navItems = [
   },
 ]
 
-export default function index() {
+export default function Nav() {
 
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);

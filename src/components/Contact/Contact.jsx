@@ -1,11 +1,11 @@
 import styles from './style.module.scss';
 import Image from 'next/image';
-import Rounded from '../../common/RoundedButton';
+import Rounded from '../../common/RoundedButton/RoundedButton';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
-import Magnetic from '../../common/Magnetic';
+import Magnetic from '../../common/Magnetic/Magnetic';
 
-export default function index() {
+export default function Contact() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -32,7 +32,7 @@ export default function index() {
                 src={`/images/background1.jpg`}
               />
             </div>
-            <h2>Let's work</h2>
+            <h2>Let&apos;s work</h2>
           </span>
           <h2>together</h2>
           <motion.div
@@ -95,10 +95,7 @@ export default function index() {
               </a>
             </Magnetic>
             <Magnetic>
-              <a
-                href="https://github.com/Alishba-Siddique"
-                target='_blank'
-              >
+              <a href="https://github.com/Alishba-Siddique" target="_blank">
                 GitHub
               </a>
             </Magnetic>

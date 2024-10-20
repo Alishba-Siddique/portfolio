@@ -6,22 +6,22 @@ import Image from 'next/image';
 const slider1 = [
   {
     color: '#e3e5e7',
-    src: '(9).webp',
+    src: '(5).webp',
     href: 'https://ocr-image-to-text.netlify.app/',
   },
   {
     color: '#d4e3ec',
-    src: '(10).webp',
+    src: '(6).webp',
     href: 'https://www.loom.com/share/c28e2fae91f942629f65782a40329533',
   },
   {
     color: '#e3e3e3',
-    src: '(14).webp',
-    href: 'https://github.com/Alishba-Siddique/facial-recognition-attendance-project',
+    src: '(7).webp',
+    href: 'https://github.com/Alishba-Siddique/cartopy',
   },
   {
     color: '#21242b',
-    src: '(4).webp',
+    src: '(8).webp',
     href: 'https://github.com/Alishba-Siddique/ai-image-generator',
   },
 ];
@@ -29,27 +29,27 @@ const slider1 = [
 const slider2 = [
   {
     color: '#d4e3ec',
-    src: '(2).webp',
-    href: 'https://www.loom.com/share/c28e2fae91f942629f65782a40329533',
+    src: '(9).webp',
+    href: 'https://alishba-siddique.github.io/KDramatic/',
   },
   {
     color: '#e5e0e1',
-    src: '(6).webp',
+    src: '(10).webp',
     href: 'https://github.com/Alishba-Siddique/Pneumonia-Prediction-using-Convolational-Neural-Network',
   },
   {
     color: '#d7d4cf',
-    src: '(13).webp',
+    src: '(11).webp',
     href: 'https://alishba-siddique.github.io/Homeration/',
   },
   {
     color: '#e1dad6',
-    src: '(11).webp',
+    src: '(12).webp',
     href: 'https://alishba-siddique.github.io/Calculator_React/',
   },
 ];
 
-export default function index() {
+export default function SlidingImages() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,

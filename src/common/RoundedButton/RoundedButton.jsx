@@ -2,9 +2,9 @@ import React from 'react';
 import { useEffect, useRef } from 'react';
 import styles from './style.module.scss';
 import gsap from 'gsap';
-import Magnetic from '../Magnetic';
+import Magnetic from '../Magnetic/Magnetic';
 
-export default function index({
+export default function RoundedButton({
   children,
   backgroundColor = '#6781F6',
   color = 'white',

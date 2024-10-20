@@ -1,11 +1,11 @@
 'use client';
 import styles from './style.module.scss';
 import { useState, useEffect, useRef } from 'react';
-import Project from './components/project';
+import Project from './components/project/ProjectText';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import Image from 'next/image';
-import Rounded from '../../common/RoundedButton';
+import Rounded from '../../common/RoundedButton/RoundedButton';
 
 const projects = [
   {
@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: 'Full Stack',
-    src: '(5).webp',
+    src: '(2).webp',
     color: '#8C8C8C',
     href: 'https://github.com/Alishba-Siddique/ecommerce-store',
   },
@@ -27,10 +27,10 @@ const projects = [
     href: 'https://www.fiverr.com/s/o8xyvbA',
   },
   {
-    title: 'Portfolio Website',
-    src: '(8).webp',
+    title: 'Portfolio Client',
+    src: '(4).webp',
     color: '#706D63',
-    href: 'portfolio-fiverr-alpha.vercel.app',
+    href: 'https://portfolio-fiverr-nine.vercel.app/',
   },
 ];
 
@@ -50,7 +50,7 @@ const scaleAnimation = {
   },
 };
 
-export default function Home() {
+export default function Projects() {
   const [modal, setModal] = useState({ active: false, index: 0, href: '' });
   const { active, index, href } = modal;
   const modalContainer = useRef(null);
@@ -104,14 +104,14 @@ export default function Home() {
   };
   const manageModal = (active, index, x, y) => {
     moveItems(x, y);
-    setModal({ active, index, href: projects[index].href  });
+    setModal({ active, index, href: projects[index].href });
   };
 
   return (
     <main
-    onClick={() => {
-      href && window.open(href, '_blank');
-    }}
+      onClick={() => {
+        href && window.open(href, '_blank');
+      }}
       onMouseMove={(e) => {
         moveItems(e.clientX, e.clientY);
       }}
