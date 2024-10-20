@@ -1,0 +1,10 @@
+
+body{
+    margin: 0px;
+    overflow-x: hidden; /* Hide scrollbars */
+    cursor: wait;
+}
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
