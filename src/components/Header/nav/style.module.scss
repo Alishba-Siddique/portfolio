@@ -1,4 +1,109 @@
-.menu{
+// /* src/components/Header/style.module.scss */
+// .menu{
+//     height: 100vh;
+//     background-color: rgb(41, 41, 41);
+//     position: fixed;
+//     right: 0;
+//     top: 0;
+//     color: white;
+//     z-index: 3;
+
+//     @media (max-width: 768px) {
+//         width: 100%; // Full width on mobile
+//     }
+
+//     .body{
+//         box-sizing: border-box;
+//         height: 100%;
+//         padding: 60px 200px 60px 60px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-around;
+
+//         @media (max-width: 1024px) {
+//             padding: 40px 100px 40px 40px;
+//         }
+
+//         @media (max-width: 768px) {
+//             padding: 40px 40px;
+//             justify-content: flex-start; // Better spacing on mobile
+//         }
+
+//         @media (max-width: 480px) {
+//             padding: 30px 20px;
+//         }
+
+//         .nav{
+//             display: flex;
+//             flex-direction: column;
+//             font-size: 46px;
+//             gap: 0px;
+//             margin-top: 30px;
+
+//             @media (max-width: 1024px) {
+//                 font-size: 38px;
+//             }
+
+//             @media (max-width: 768px) {
+//                 font-size: 32px;
+//                 margin-top: 60px; // More space from top on mobile
+//             }
+
+//             @media (max-width: 480px) {
+//                 font-size: 28px;
+//                 margin-top: 40px;
+//             }
+
+//             .header{
+//                 color: rgb(153, 153, 153);
+//                 border-bottom: 1px solid rgb(153, 153, 153);
+//                 text-transform: uppercase;
+//                 font-size: 11px;
+//                 margin-bottom: 40px;
+
+//                 @media (max-width: 768px) {
+//                     margin-bottom: 30px;
+//                 }
+
+//                 @media (max-width: 480px) {
+//                     margin-bottom: 20px;
+//                     font-size: 10px;
+//                 }
+//             }
+
+//             a{
+//                 text-decoration: none;
+//                 color: white;
+//                 font-weight: 300;
+//                 list-style: none;
+//                 padding: 12px 0;
+
+//                 @media (max-width: 768px) {
+//                     padding: 10px 0;
+//                 }
+
+//                 @media (max-width: 480px) {
+//                     padding: 8px 0;
+//                 }
+
+//                 &:active {
+//                     opacity: 0.7; // Better touch feedback on mobile
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// // Add touch-friendly hover states for mobile
+// @media (hover: hover) {
+//     .nav a:hover {
+//         opacity: 0.7;
+//     }
+// }
+
+
+/* src/components/Header/style.module.scss */
+.menu {
     height: 100vh;
     background-color: rgb(41, 41, 41);
     position: fixed;
@@ -6,36 +111,85 @@
     top: 0;
     color: white;
     z-index: 3;
-    .body{
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    .body {
         box-sizing: border-box;
         height: 100%;
-        padding: 60px 200px 60px 60px;
+        padding: 3.75rem 12.5rem 3.75rem 3.75rem; /* 60px 200px 60px 60px / 16px */
         display: flex;
         flex-direction: column;
         justify-content: space-around;
 
-        .nav{
+        @media (max-width: 1024px) {
+            padding: 2.5rem 6.25rem 2.5rem 2.5rem; /* 40px 100px 40px 40px / 16px */
+        }
+
+        @media (max-width: 768px) {
+            padding: 2.5rem; /* 40px / 16px */
+            justify-content: flex-start;
+        }
+
+        @media (max-width: 480px) {
+            padding: 1.875rem 1.25rem; /* 30px 20px / 16px */
+        }
+
+        .nav {
             display: flex;
             flex-direction: column;
-            font-size: 46px;
-            gap: 0px;
-            margin-top: 30px;
+            font-size: 2.875rem; /* 46px / 16px */
+            gap: 0;
+            margin-top: 1.875rem; /* 30px / 16px */
 
-            .header{
-                color: rgb(153, 153, 153);
-                border-bottom: 1px solid rgb(153, 153, 153);
-                text-transform: uppercase;
-                font-size: 11px;
-                margin-bottom: 40px;
+            @media (max-width: 1024px) {
+                font-size: 2.375rem; /* 38px / 16px */
             }
 
-            a{
+            @media (max-width: 768px) {
+                font-size: 2rem; /* 32px / 16px */
+                margin-top: 3.75rem; /* 60px / 16px */
+            }
+
+            @media (max-width: 480px) {
+                font-size: 1.75rem; /* 28px / 16px */
+                margin-top: 2.5rem; /* 40px / 16px */
+            }
+
+            .header {
+                color: rgb(153, 153, 153);
+                border-bottom: 0.0625rem solid rgb(153, 153, 153); /* 1px / 16px */
+                text-transform: uppercase;
+                font-size: 0.6875rem; /* 11px / 16px */
+                margin-bottom: 2.5rem; /* 40px / 16px */
+
+                @media (max-width: 768px) {
+                    margin-bottom: 1.875rem; /* 30px / 16px */
+                }
+
+                @media (max-width: 480px) {
+                    margin-bottom: 1.25rem; /* 20px / 16px */
+                    }
+
+            }
+
+            a {
                 text-decoration: none;
                 color: white;
                 font-weight: 300;
                 list-style: none;
+                padding: 1.25rem 0; /* 20px / 16px */
+
+                @media (max-width: 768px) {
+                    padding: 1rem 0; /* 16px / 16px */
+                }
+
+                @media (max-width: 480px) {
+                    padding: 0.875rem 0; /* 14px / 16px */
+                }
+                }
             }
-            
         }
     }
-}

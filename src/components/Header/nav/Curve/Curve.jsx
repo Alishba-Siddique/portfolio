@@ -1,3 +1,4 @@
+// src/components/Header/nav/Curve/Curve.jsx
 import React from 'react'
 import { motion } from 'framer-motion';
 import styles from './styles.module.scss';

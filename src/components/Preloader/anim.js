@@ -1,3 +1,4 @@
+// src/components/Preloader/anim.js
 export const opacity = {
     initial: {
         opacity: 0

@@ -1,3 +1,4 @@
+// src/app/page.js
 'use client';
 import styles from './page.module.scss'
 import { useEffect, useState } from 'react'

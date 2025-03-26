@@ -1,24 +1,99 @@
-.projects{
+// /* src/components/Projects/style.module.scss */
+// .projects{
+//     display: flex;
+//     align-items: center;
+//     padding-left: 200px;
+//     padding-right: 200px;
+//     flex-direction: column;
+//     margin-top: 300px;
+
+//     .body{
+//         max-width: 1400px;
+//         width: 100%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         margin-bottom: 100px;
+//     }
+    
+//     .modalContainer{
+//         height: 350px;
+//         width: 400px;
+//         position: fixed;
+//         top: 50%;
+//         left: 50%;
+//         background-color: white;
+//         pointer-events: none;
+//         overflow: hidden;
+//         z-index: 3;
+//     }
+    
+//     .modalSlider{
+//         height: 100%;
+//         width: 100%;
+//         position: relative;
+//         transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+//     }
+    
+//     .modal{
+//         height: 100%;
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//     }
+    
+//     .modal img{
+//         height: auto;
+//     }
+    
+//     .cursor, .cursorLabel{
+//         width: 80px;
+//         height: 80px;
+//         border-radius: 50%;
+//         background-color: #6781F6;
+//         color: white;
+//         position: fixed;
+//         z-index:9;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         font-size: 14px;
+//         font-weight: 300;
+//         pointer-events: none;
+//         cursor: pointer;
+//     }
+    
+//     .cursorLabel{
+//         background-color: transparent;
+//     }
+    
+    
+// }
+
+/* src/components/Projects/style.module.scss */
+.projects {
     display: flex;
     align-items: center;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding-left: 12.5rem; /* 200px / 16px = 12.5rem */
+    padding-right: 12.5rem; /* 200px / 16px = 12.5rem */
     flex-direction: column;
-    margin-top: 300px;
+    margin-top: 18.75rem; /* 300px / 16px = 18.75rem */
 
-    .body{
-        max-width: 1400px;
+    .body {
+        max-width: 87.5rem; /* 1400px / 16px = 87.5rem */
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-bottom: 100px;
+        margin-bottom: 6.25rem; /* 100px / 16px = 6.25rem */
     }
-    
-    .modalContainer{
-        height: 350px;
-        width: 400px;
+
+    .modalContainer {
+        height: 21.875rem; /* 350px / 16px = 21.875rem */
+        width: 25rem; /* 400px / 16px = 25rem */
         position: fixed;
         top: 50%;
         left: 50%;
@@ -27,47 +102,45 @@
         overflow: hidden;
         z-index: 3;
     }
-    
-    .modalSlider{
+
+    .modalSlider {
         height: 100%;
         width: 100%;
         position: relative;
         transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
     }
-    
-    .modal{
+
+    .modal {
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
-    .modal img{
+
+    .modal img {
         height: auto;
     }
-    
-    .cursor, .cursorLabel{
-        width: 80px;
-        height: 80px;
+
+    .cursor,
+    .cursorLabel {
+        width: 6.25rem; /* 80px / 16px = 6.25rem */
+        height: 6.25rem; /* 80px / 16px = 6.25rem */
         border-radius: 50%;
-        background-color: #6781F6;
+        background-color: #6781f6;
         color: white;
         position: fixed;
-        z-index:9;
+        z-index: 9;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 14px;
+        font-size: 0.875rem; /* 14px / 16px = 0.875rem */
         font-weight: 300;
         pointer-events: none;
         cursor: pointer;
     }
-    
-    .cursorLabel{
+
+    .cursorLabel {
         background-color: transparent;
     }
-    
-    
 }
-

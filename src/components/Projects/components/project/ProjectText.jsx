@@ -1,3 +1,4 @@
+// src/components/Projects/components/project/ProjectText.jsx
 'use client';
 import React from 'react'
 import styles from './style.module.scss';

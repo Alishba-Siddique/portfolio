@@ -1,3 +1,4 @@
+// src/components/Description/animation.js
 export const slideUp = {
     initial: {
         y: "100%"

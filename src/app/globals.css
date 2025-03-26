@@ -1,10 +1,11 @@
-
-body{
+/* src/app/global.css */
+body {
     margin: 0px;
     overflow-x: hidden; /* Hide scrollbars */
     cursor: wait;
-}
-
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+    font-size: 16px; /* Base font size for rem units */
+  }
+  
+  @import 'tailwindcss/base';
+  @import 'tailwindcss/components';
+  @import 'tailwindcss/utilities';

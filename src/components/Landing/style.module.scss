@@ -1,3 +1,4 @@
+/* src/components/Landing/style.module.scss */
 .landing{
     position: relative;
     display: flex;
@@ -49,5 +50,43 @@
         margin-bottom: 60px;
       }
     }
+
+    @media (max-width: 768px) {
+      .sliderContainer {
+          top: calc(100vh - 10rem); /* Adjusted for smaller screens */
+      }
+
+      .slider p {
+          font-size: 6.25rem; /* Reduced font size for slider text */
+          padding-right: 1.5625rem;
+      }
+
+      .description {
+          top: 15%; /* Adjusted position for smaller screens */
+          left: 10%; /* Adjusted position for smaller screens */
+          font-size: 1.125rem; /* Adjusted font size for description */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .sliderContainer {
+          top: calc(100vh - 7rem); /* Further adjust for smaller screens */
+      }
+
+      .slider p {
+          font-size: 4.375rem; /* Further reduce font size */
+          padding-right: 1rem;
+      }
+
+      .description {
+          top: 10%;
+          left: 5%;
+          font-size: 1rem; /* Smallest font size for mobile */
+
+          svg {
+              margin-bottom: 1.875rem; /* Reduce margin for mobile */
+          }
+      }
+  }
   }
   

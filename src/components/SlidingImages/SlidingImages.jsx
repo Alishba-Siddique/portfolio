@@ -1,3 +1,4 @@
+// src/components/SlidingImages/SlidingImages.jsx
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';

@@ -1,3 +1,4 @@
+// src/components/Landing/animation.js
 export const slideUp = {
     initial: {
         y: 300

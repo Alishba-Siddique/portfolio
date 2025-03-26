@@ -1,3 +1,4 @@
+// src/components/Header/nav/Footer/Footer.jsx
 import styles from './style.module.scss';
 import Magnetic from '../../../../common/Magnetic/Magnetic';
 

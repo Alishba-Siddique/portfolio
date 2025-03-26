@@ -1,39 +1,108 @@
-.description{
-    padding-left: 200px;
-    padding-right: 200px;
-    margin-top: 200px;
+// /* src/components/Description/style.module.scss */
+// .description{
+//     padding-left: 200px;
+//     padding-right: 200px;
+//     margin-top: 200px;
+//     display: flex;
+//     justify-content: center;
+//     .body{
+//         max-width: 1400px;
+//         display: flex;
+//         gap: 70px;
+//         position: relative;
+//         p{
+//             margin: 0px;
+//             &:nth-of-type(1){
+//                 font-size: 36px;
+//                 gap: 8px;
+//                 line-height: 1.3;
+//                 span{
+//                     margin-right: 3px;
+//                 }
+//                 .mask{
+//                     position: relative;
+//                     overflow: hidden;
+//                     display: inline-flex;
+//                 }
+//             }
+//             &:nth-of-type(2){
+//                 font-size: 18px;
+//                 font-weight: 300;
+//             }
+//         }
+//         .button{
+//             top: 80%;
+//             left: calc(100% - 200px); 
+//             width: 180px;
+//             height: 180px;
+//             background-color: #1C1D20;
+//             color: white;
+//             border-radius: 50%;
+//             position: absolute;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             cursor: pointer;
+//             a{
+//                 margin: 0px;
+//                 font-size: 16px;
+//                 font-weight: 300;
+//                 position: relative;
+//                 z-index: 1;
+//             }
+//         }
+//     }
+//     .moreWork{
+//         padding: 20px;
+//         border-radius: 40px;
+//         border: 1px solid grey;
+//     }
+// }
+
+/* src/components/Description/style.module.scss */
+.description {
+    padding-left: 12.5rem; /* 200px / 16px = 12.5rem */
+    padding-right: 12.5rem; /* 200px / 16px = 12.5rem */
+    margin-top: 12.5rem; /* 200px / 16px = 12.5rem */
     display: flex;
     justify-content: center;
-    .body{
-        max-width: 1400px;
+
+    .body {
+        max-width: 87.5rem; /* 1400px / 16px = 87.5rem */
         display: flex;
-        gap: 70px;
+        gap: 4.375rem; /* 70px / 16px = 4.375rem */
         position: relative;
-        p{
-            margin: 0px;
-            &:nth-of-type(1){
-                font-size: 36px;
-                gap: 8px;
+
+        p {
+            margin: 0;
+
+            &:nth-of-type(1) {
+                font-size: 2.25rem; /* 36px / 16px = 2.25rem */
+                gap: 0.5rem; /* 8px / 16px = 0.5rem */
                 line-height: 1.3;
-                span{
-                    margin-right: 3px;
+
+                span {
+                    margin-right: 0.1875rem; /* 3px / 16px = 0.1875rem */
                 }
-                .mask{
+
+                .mask {
                     position: relative;
                     overflow: hidden;
                     display: inline-flex;
                 }
             }
-            &:nth-of-type(2){
-                font-size: 18px;
+
+            &:nth-of-type(2) {
+                font-size: 1.125rem; /* 18px / 16px = 1.125rem */
                 font-weight: 300;
             }
         }
-        .button{
+
+        .button {
             top: 80%;
-            left: calc(100% - 200px); 
-            width: 180px;
-            height: 180px;
+            left: calc(100% - 12.5rem); /* 200px / 16px = 12.5rem */
+            width: 11.25rem; /* 180px / 16px = 11.25rem */
+            height: 11.25rem; /* 180px / 16px = 11.25rem */
             background-color: #1C1D20;
             color: white;
             border-radius: 50%;
@@ -42,18 +111,34 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            a{
-                margin: 0px;
-                font-size: 16px;
+
+            a {
+                margin: 0;
+                font-size: 1rem; /* 16px / 16px = 1rem */
                 font-weight: 300;
                 position: relative;
                 z-index: 1;
             }
         }
     }
-    .moreWork{
-        padding: 20px;
-        border-radius: 40px;
-        border: 1px solid grey;
+
+    .moreWork {
+        padding: 1.25rem; /* 20px / 16px = 1.25rem */
+        border-radius: 2.5rem; /* 40px / 16px = 2.5rem */
+        border: 0.0625rem solid grey; /* 1px / 16px = 0.0625rem */
+    }
+    @media (max-width: 768px) {
+        padding-left: 50px;
+        padding-right: 50px;
+        .body{
+            flex-direction: column;
+        }
+        p:nth-of-type(1) {
+            font-size: 1.5rem; /* Reduced font size for smaller screens */
+        }
+
+        p:nth-of-type(2) {
+            font-size: 1rem; /* Reduced font size for smaller screens */
+        }
     }
 }

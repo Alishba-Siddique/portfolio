@@ -1,3 +1,4 @@
+// src/components/Description/Description.jsx
 import styles from './style.module.scss';
 import { useInView, motion } from 'framer-motion';
 import { useRef } from 'react';
