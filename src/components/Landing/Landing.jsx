@@ -87,20 +87,7 @@ export default function Landing() {
   const xPercentRef = useRef(0);  // Store xPercent in useRef
   const directionRef = useRef(-1); // Store direction in useRef
 
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.to(slider.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        scrub: 0.25,
-        start: 0,
-        end: window.innerHeight,
-        onUpdate: e => directionRef.current = e.direction * -1 // Update direction in useRef
-      },
-      x: "-500px",
-    });
-    requestAnimationFrame(animate);
-  }, []);
+  
 
   const animate = () => {
     if (xPercentRef.current < -100) {
@@ -114,6 +101,21 @@ export default function Landing() {
     xPercentRef.current += 0.1 * directionRef.current; // Use direction from useRef
   };
 
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: 0,
+        end: window.innerHeight,
+        onUpdate: e => directionRef.current = e.direction * -1 // Update direction in useRef
+      },
+      x: "-500px",
+    });
+    requestAnimationFrame(animate);
+  }, [animate]);
+  
   return (
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <Image
