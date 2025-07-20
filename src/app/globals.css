@@ -1,7 +1,7 @@
 /* src/app/global.css */
 body {
     margin: 0px;
-    overflow-x: hidden; /* Hide scrollbars */
+    overflow-x: hidden !important; /* Hide scrollbars */
     cursor: wait;
     font-size: 16px; /* Base font size for rem units */
   }

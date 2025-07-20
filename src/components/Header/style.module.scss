@@ -347,15 +347,18 @@
         justify-content: center;
 
         @media (max-width: 768px) {
+            
             width: 3.75rem; /* 60px / 16px = 3.75rem */
             height: 3.75rem; /* 60px / 16px = 3.75rem */
             margin: 0.9375rem; /* 15px / 16px = 0.9375rem */
+            right: 3rem;
         }
 
         @media (max-width: 480px) {
             width: 3.125rem; /* 50px / 16px = 3.125rem */
             height: 3.125rem; /* 50px / 16px = 3.125rem */
             margin: 0.625rem; /* 10px / 16px = 0.625rem */
+            right: 2rem;
         }
     }
 
