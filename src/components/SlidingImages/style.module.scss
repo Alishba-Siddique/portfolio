@@ -1,61 +1,12 @@
-// /*  src/components/SlidingImages/style.module.scss  */
-// .slidingImages{
-//     display: flex;
-//     flex-direction: column;
-//     gap: 3vw;
-//     position: relative;
-//     margin-top: 200px;
-//     background-color: white;
-//     z-index: 1;
-//     .slider{
-//         display: flex;
-//         position: relative;
-//         gap: 3vw;
-//         width: 120vw;
-//         left: -10vw;
-//         .project{
-//             width: 25%;
-//             height: 20vw;
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             .imageContainer{
-//                 position: relative;
-//                 width: 80%;
-//                 height: 80%;
-//                 img{
-//                     object-fit: cover;
-//                 }
-//             }
-//         }
-//     }
-//     .circleContainer{
-//         background-color: red;
-//         position: relative;
-//         margin-top: 100px;
-//         .circle{
-//             height: 1550%;
-//             width: 120%;
-//             left: -10%;
-//             border-radius: 0 0 50% 50%;
-//             background-color: white;
-//             z-index: 1;
-//             position: absolute;
-//             box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
-//         }
-//     }
-// }
-
 /*  src/components/SlidingImages/style.module.scss  */
 .slidingImages {
     display: flex;
     flex-direction: column;
     gap: 3vw;
     position: relative;
-    margin-top: 12.5rem; /* 200px / 16px = 12.5rem */
+    margin-top: 12.5rem;
     background-color: white;
     z-index: 1;
-    
 
     .slider {
         display: flex;
@@ -63,7 +14,9 @@
         gap: 3vw;
         width: 120vw;
         left: -10vw;
-        overflow-x: hidden; /* Enable horizontal scrolling */
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
 
         .project {
             width: 25%;
@@ -71,25 +24,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;  /* Prevent items from shrinking */
-            
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            transition: width 0.3s, height 0.3s;
+
             .imageContainer {
                 position: relative;
                 width: 80%;
                 height: 80%;
-
                 img {
                     object-fit: cover;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
     }
 
     .circleContainer {
-        background-color: red;
         position: relative;
-        margin-top: 6.25rem; /* 100px / 16px = 6.25rem */
-
+        margin-top: 6.25rem;
         .circle {
             height: 1550%;
             width: 120%;
@@ -98,30 +52,57 @@
             background-color: white;
             z-index: 1;
             position: absolute;
-            box-shadow: 0px 3.75rem 3.125rem rgba(0, 0, 0, 0.748); /* 60px 50px / 16px */
+            box-shadow: 0px 3.75rem 3.125rem rgba(0, 0, 0, 0.748);
         }
     }
-}
 
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .slidingImages {
-        gap: 5vw;
-    }
-
-    .slidingImages .slider {
-        gap: 5vw;
-
-        .project {
-            width: 50%; /* Adjust width on smaller screens */
-            height: 40vw; /* Adjust height on smaller screens */
+    @media (max-width: 1024px) {
+        gap: 4vw;
+        .slider {
+            gap: 4vw;
+            .project {
+                width: 40%;
+                height: 30vw;
+            }
+        }
+        .circleContainer {
+            margin-top: 3rem;
+            .circle {
+                height: 900%;
+            }
         }
     }
-}
-
-@media (max-width: 480px) {
-    .slidingImages .slider .project {
-        width: 80%; /* Adjust width on even smaller screens */
-        height: 60vw; /* Adjust height on even smaller screens */
+    @media (max-width: 768px) {
+        gap: 5vw;
+        .slider {
+            gap: 5vw;
+            width: 100vw;
+            left: 0;
+            .project {
+                width: 70%;
+                height: 45vw;
+            }
+        }
+        .circleContainer {
+            margin-top: 2rem;
+            .circle {
+                height: 400%;
+            }
+        }
+    }
+    @media (max-width: 480px) {
+        .slider {
+            gap: 6vw;
+            .project {
+                width: 90vw;
+                height: 60vw;
+            }
+        }
+        .circleContainer {
+            margin-top: 1rem;
+            .circle {
+                height: 200%;
+            }
+        }
     }
 }

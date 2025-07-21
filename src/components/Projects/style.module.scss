@@ -76,24 +76,25 @@
 .projects {
     display: flex;
     align-items: center;
-    padding-left: 12.5rem; /* 200px / 16px = 12.5rem */
-    padding-right: 12.5rem; /* 200px / 16px = 12.5rem */
+    padding-left: 12.5rem;
+    padding-right: 12.5rem;
     flex-direction: column;
-    margin-top: 18.75rem; /* 300px / 16px = 18.75rem */
+    margin-top: 18.75rem;
 
     .body {
-        max-width: 87.5rem; /* 1400px / 16px = 87.5rem */
+        max-width: 87.5rem;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        // grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: stretch;
         justify-content: center;
-        margin-bottom: 6.25rem; /* 100px / 16px = 6.25rem */
+        margin-bottom: 6.25rem;
     }
 
     .modalContainer {
-        height: 21.875rem; /* 350px / 16px = 21.875rem */
-        width: 25rem; /* 400px / 16px = 25rem */
+        height: 21.875rem;
+        width: 25rem;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -101,6 +102,7 @@
         pointer-events: none;
         overflow: hidden;
         z-index: 3;
+        transform: translate(-50%, -50%);
     }
 
     .modalSlider {
@@ -120,12 +122,15 @@
 
     .modal img {
         height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
     }
 
     .cursor,
     .cursorLabel {
-        width: 6.25rem; /* 80px / 16px = 6.25rem */
-        height: 6.25rem; /* 80px / 16px = 6.25rem */
+        width: 6.25rem;
+        height: 6.25rem;
         border-radius: 50%;
         background-color: #6781f6;
         color: white;
@@ -134,7 +139,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 0.875rem; /* 14px / 16px = 0.875rem */
+        font-size: 0.875rem;
         font-weight: 300;
         pointer-events: none;
         cursor: pointer;
@@ -142,5 +147,60 @@
 
     .cursorLabel {
         background-color: transparent;
+    }
+
+    @media (max-width: 1024px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-top: 10rem;
+        .body {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .modalContainer {
+            width: 18rem;
+            height: 15rem;
+        }
+        .cursor, .cursorLabel {
+            width: 4.5rem;
+            height: 4.5rem;
+            font-size: 0.8rem;
+        }
+    }
+    @media (max-width: 768px) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-top: 6rem;
+        .body {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .modalContainer {
+            width: 12rem;
+            height: 10rem;
+        }
+        .cursor, .cursorLabel {
+            width: 3.5rem;
+            height: 3.5rem;
+            font-size: 0.7rem;
+        }
+    }
+    @media (max-width: 480px) {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-top: 3rem;
+        .body {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        .modalContainer {
+            width: 8rem;
+            height: 6rem;
+        }
+        .cursor, .cursorLabel {
+            width: 2.2rem;
+            height: 2.2rem;
+            font-size: 0.6rem;
+        }
     }
 }

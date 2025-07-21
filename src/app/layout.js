@@ -7,8 +7,8 @@ import { Providers } from '../store/provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Alishba Siddique - Portfolio',
-  description: 'Portfolio website of Alishba Siddique',
+  title: 'Alishba Siddique - Software Engineer & Full Stack Developer',
+  description: 'Alishba Siddique is a software engineer with a passion for building scalable and efficient web applications.',
 };
 
 export default function RootLayout({ children }) {

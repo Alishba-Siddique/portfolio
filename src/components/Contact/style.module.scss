@@ -16,7 +16,7 @@
 
         .title{
             border-bottom: 1px solid rgb(134, 134, 134);
-            padding-bottom: 100px;
+            // padding-bottom: 100px;
             margin-left: 200px;
             margin-right: 200px;
             position: relative;
@@ -83,7 +83,7 @@
         .info{
             display: flex;
             justify-content: space-between;
-            margin-top: 200px;
+            margin-top: 100px;
             padding: 20px;
             div{
                 display: flex;
@@ -159,14 +159,7 @@
     }
     .info {
       margin-top: 100px;
-      flex-direction: column;
-      gap: 30px;
       padding: 10px;
-      div {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
     }
   }
 }
@@ -189,8 +182,9 @@
         justify-content: center;
       }
       .button {
-        width: 70px;
-        height: 70px;
+        width: 80px;
+        height: 80px;
+        text-align: center;
         font-size: 0.9rem;
       }
       span .imageContainer {
@@ -213,7 +207,7 @@
       padding: 0 2px;
       div {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 6px;
       }
     }
