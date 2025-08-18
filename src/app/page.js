@@ -1,13 +1,13 @@
 // src/app/page.js
 'use client';
 import styles from './page.module.scss';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '../components/Preloader/PreLoader';
 import Landing from '../components/Landing/Landing';
 import Projects from '../components/Projects/Projects';
 import Description from '../components/Description/Description';
-import SlidingImages from '../components/SlidingImages/SlidingImages';
+import SlidingImages from '../components/SlidingProjects/SlidingProjects';
 import Contact from '../components/Contact/Contact';
 import { useDispatch, useSelector } from 'react-redux';
 import { setLoading } from '../store/slices/uiSlice';
@@ -15,11 +15,12 @@ import { setLoading } from '../store/slices/uiSlice';
 export default function Home() {
   const dispatch = useDispatch();
   const isLoading = useSelector((state) => state.ui.isLoading);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      const locomotiveScroll = new LocomotiveScroll();
+      scrollRef.current = new LocomotiveScroll();
 
       setTimeout(() => {
         dispatch(setLoading(false));
@@ -27,6 +28,12 @@ export default function Home() {
         window.scrollTo(0, 0);
       }, 2000);
     })();
+
+    return () => {
+      if (scrollRef.current) {
+        scrollRef.current.destroy();
+      }
+    }
   }, [dispatch]);
 
   return (

@@ -50,7 +50,7 @@ export default function Header() {
           gsap.to(
             button.current,
             { scale: 0, duration: 0.25, ease: 'power1.out' },
-            dispatch(toggleMenu())
+            // dispatch(toggleMenu())
           );
         },
       },
