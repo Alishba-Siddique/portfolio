@@ -20,7 +20,7 @@ export default function Header() {
 
   useEffect(() => {
     if (isMenuOpen) dispatch(toggleMenu());
-  }, [pathname, dispatch]);
+  }, [pathname, dispatch, isMenuOpen]);
 
   useEffect(() => {
     const handleResize = () => {
