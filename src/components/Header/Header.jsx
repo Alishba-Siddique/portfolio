@@ -18,9 +18,9 @@ export default function Header() {
   const dispatch = useDispatch();
   const { isMenuOpen, isMobile } = useSelector((state) => state.ui);
 
-  useEffect(() => {
-    if (isMenuOpen) dispatch(toggleMenu());
-  }, [pathname, dispatch, isMenuOpen]);
+  // useEffect(() => {
+  //   if (isMenuOpen) dispatch(toggleMenu());
+  // }, [pathname, dispatch, isMenuOpen]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -65,7 +65,7 @@ export default function Header() {
           <a href="/" className={styles.name}>
             <p className={styles.codeBy}>Code by</p>
             <p className={styles.dennis}>Alishba</p>
-            <p className={styles.snellenberg}>Siddique</p>
+            {!isMobile && (<p className={styles.snellenberg}>Siddique</p>)}
           </a>
         </div>
         {!isMobile && (
