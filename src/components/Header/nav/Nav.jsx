@@ -8,7 +8,7 @@ import Link from './LinkNav/LinkNav';
 import Curve from './Curve/Curve';
 import Footer from './Footer/Footer';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSelectedIndicator } from '../../../store/slices/uiSlice';
+import { setSelectedIndicator, toggleMenu } from '../../../store/slices/uiSlice';
 
 const navItems = [
   {
@@ -45,11 +45,8 @@ export default function Nav() {
 
   return (
     <motion.div
-      variants={slideAnimation}
-      initial="initial"
-      animate="enter"
-      exit="exit"
       className={styles.menu}
+      style={{ width: '300px', height: '100vh', position: 'fixed', right: 0, top: 0, zIndex: 999 }}
     >
       <div className={styles.body}>
         <div
@@ -58,6 +55,7 @@ export default function Nav() {
         >
           <div className={styles.header}>
             <p>Navigation</p>
+            <div className={styles.closeButton} onClick={() => dispatch(toggleMenu())}>X</div>
           </div>
           {navItems.map((data, index) => {
             return (
