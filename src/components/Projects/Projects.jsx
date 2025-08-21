@@ -10,33 +10,34 @@ import Rounded from '../../common/RoundedButton/RoundedButton';
 
 const projects = [
   {
-    title: 'AI',
+    title: 'AI Solutions',
     type: 'video',
     src: 'movie-recommender.mp4',
     color: '#000000',
     href: 'https://movie-recommender-system-alishba.streamlit.app/',
   },
   {
-    title: 'Full Stack',
+    title: 'Full Stack Development',
     type: 'video',
-    src: 'parfum.mp4', // example video file
+    src: 'hey-jinie.mp4',
     color: '#8C8C8C',
-    href: 'https://github.com/Alishba-Siddique/ecommerce-store',
+    href: 'heyjinie.com',
   },
   {
-    title: 'Freelance',
+    title: 'E-commerce Applications',
+    type: 'video',
+    src: 'parfum.mp4',
+    color: '#706D63',
+    href: 'https://github.com/Alishba-Siddique/ecommerce-store',
+  },
+   {
+    title: 'Freelance Projects',
     type: 'image',
     src: '(3).webp',
     color: '#EFE8D3',
     href: 'https://www.fiverr.com/s/o8xyvbA',
   },
-  {
-    title: 'Portfolio Client',
-    type: 'image',
-    src: '(4).webp',
-    color: '#706D63',
-    href: 'https://portfolio-fiverr-nine.vercel.app/',
-  },
+  
 ];
 
 const scaleAnimation = {
