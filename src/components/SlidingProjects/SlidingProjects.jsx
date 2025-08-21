@@ -178,8 +178,8 @@ const slider2 = [
   {
     type: 'image',
     color: '#d4e3ec',
-    src: '(12).webp',
-    href: 'https://alishba-siddique.github.io/Calculator_React/',
+    src: '(4).webp',
+    href: 'https://portfolio-fiverr-nine.vercel.app/',
   },
   {
     type: 'video',
