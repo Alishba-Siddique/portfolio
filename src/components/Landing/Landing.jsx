@@ -14,7 +14,7 @@ export default function Landing() {
   const secondText = useRef(null);
   const slider = useRef(null);
   const xPercentRef = useRef(0);
-  const directionRef = useRef(-1); 
+  const directionRef = useRef(-1);
 
   const animate = useCallback(() => {
     if (xPercentRef.current < -100) {
@@ -55,6 +55,8 @@ export default function Landing() {
         fill={true}
         alt="background"
         className={styles.background}
+        priority={true}
+        unoptimized={true}
       />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
@@ -76,7 +78,7 @@ export default function Landing() {
           />
         </svg>
         <p>Software Engineer </p>
-        <p>& Web Developer</p>
+        <p>& Full Stack Web Developer</p>
       </div>
     </motion.main>
   );
