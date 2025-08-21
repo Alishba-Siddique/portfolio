@@ -30,9 +30,9 @@ export default function Description() {
         </p>
         <motion.p variants={opacity} animate={isInView ? 'open' : 'closed'}>
           My passion for AI, design, and coding, combined with my skills as a
-          Web Developer and Software Engineer, positions me as a versatile and
-          quick learner, ready to adapt to new technologies and challenges in
-          the ever-evolving tech landscape.
+          Full Stack Web Developer and Software Engineer, positions me as a
+          versatile and quick learner, ready to adapt to new technologies and
+          challenges in the ever-evolving tech landscape.
         </motion.p>
         {/* <div data-scroll data-scroll-speed={0.1}>
                     <Rounded className={styles.button}>
