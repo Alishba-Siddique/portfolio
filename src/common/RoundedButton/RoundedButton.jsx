@@ -7,7 +7,7 @@ import Magnetic from '../Magnetic/Magnetic';
 
 export default function RoundedButton({
   children,
-  backgroundColor = '#6781F6',
+  backgroundColor = '#70478d',
   color = 'white',
   ...attributes
 }) {

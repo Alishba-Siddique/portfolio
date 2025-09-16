@@ -30,7 +30,7 @@
 //               <Image
 //                 fill={true}
 //                 alt={'image'}
-//                 src={`/images/background1.jpg`}
+//                 src={`/images/bg-1.jpg`}
 //               />
 //             </div>
 //             <h2>Let&apos;s work</h2>
@@ -41,7 +41,7 @@
 //             className={styles.buttonContainer}
 //             id="contact"
 //           >
-//             <Rounded backgroundColor={'#6781F6'} className={styles.button}>
+//             <Rounded backgroundColor={'#70478d'} className={styles.button}>
 //               <a href="mailto:alishbasiddique38@gmail.com">Get in touch</a>
 //             </Rounded>
 //           </motion.div>
@@ -139,11 +139,7 @@ export default function Contact() {
         <div className={styles.title}>
           <span>
             <div className={styles.imageContainer}>
-              <Image
-                fill={true}
-                alt={'image'}
-                src={`/images/background1.jpg`}
-              />
+              <Image fill={true} alt={'image'} src={`/images/bg-1.jpg`} />
             </div>
             <h2>Let&apos;s work</h2>
           </span>
@@ -154,7 +150,7 @@ export default function Contact() {
             id="contact"
           >
             <a href="mailto:alishbasiddique38@gmail.com">
-              <Rounded backgroundColor={'#6781F6'} className={styles.button}>
+              <Rounded backgroundColor={'#70478d'} className={styles.button}>
                 Get in touch
               </Rounded>
             </a>

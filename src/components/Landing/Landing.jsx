@@ -51,7 +51,7 @@ export default function Landing() {
       className={styles.landing}
     >
       <Image
-        src="/images/background1.jpg"
+        src="/images/bg-1.jpg"
         fill={true}
         alt="background"
         className={styles.background}
